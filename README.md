@@ -44,3 +44,16 @@ What genre do you like? (e.g., Action, Comedy, Drama)
 Do you prefer 'recent' or 'classic' movies?
 Preferred language? (e.g., en, hi, fr)
 What's your mood? (optional)
+## 📦 Requirements
+
+This project runs directly in Google Colab (no installation needed there), but if you're running locally, install the following packages:
+
+- `pandas==2.2.2` – for data manipulation
+- `numpy==1.26.4` – for numerical operations
+- `scikit-learn==1.4.2` – (optional) for future machine learning enhancements
+- `streamlit==1.35.0` – (optional) to build a web UI
+- `ipykernel==6.29.4` – for Jupyter Notebook compatibility
+
+### 📥 Install all at once:
+```bash
+pip install pandas numpy scikit-learn streamlit ipykernel
