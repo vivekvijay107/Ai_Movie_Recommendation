@@ -1,57 +1,59 @@
-AI Movie Recommender Web App
-============================
+# 🎬 AI Movie Recommendation System
 
-An AI-powered movie recommendation system built with Streamlit and Google Colab. It recommends movies based on:
+This project is an AI-powered movie recommendation web app built using **Streamlit**, **Python**, and **Google Colab**. It recommends movies based on user preferences including **genre**, **release year (recent/classic)**, **language**, and **mood** by leveraging NLP techniques on movie overviews.
 
-- 🎞️ Genre
-- 🗣️ Language
-- 🕰️ Year preference (Recent or Classic)
-- 😄 Mood (e.g., happy, romantic, thrilling)
+---
 
-It uses TF-IDF and cosine similarity on movie overviews to suggest the most relevant films.
+## 🚀 Features
 
-----------------------------------------
+- Interactive movie recommendations based on:
+  - Genre (Action, Comedy, Drama, etc.)
+  - Release type (Recent or Classic)
+  - Language (English, Hindi, French, etc.)
+  - Mood (Happy, Thrilling, Romantic, etc.)
+- Mood filtering using TF-IDF vectorization and cosine similarity on movie overviews
+- Uses TMDB 5000 Movies dataset for recommendations
+- Simple, clean UI powered by Streamlit
+- Hosted easily via Google Colab and Ngrok tunnel
 
-How to Use in Google Colab
----------------------------
+---
 
-1. Install required packages:
-   !pip install streamlit pyngrok --quiet
+## 📁 Dataset
 
-2. Upload the dataset:
-   from google.colab import files  
-   files.upload()  # Upload tmdb_5000_movies.csv
+The app uses the [TMDB 5000 Movies Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata). Download the dataset and upload the `tmdb_5000_movies.csv` file in Google Colab when prompted.
 
-3. Save the app code:
-   %%writefile app.py  
-   # (Paste your Streamlit app code here)
+---
 
-4. Add your ngrok token:
-   !ngrok config add-authtoken YOUR_AUTHTOKEN
+## 📒 How to Run (Google Colab)
 
-5. Run the app:
-   from pyngrok import ngrok  
-   !streamlit run app.py &>/content/log.txt &  
-   public_url = ngrok.connect("http://localhost:8501")  
-   print(public_url)
+1. Open Google Colab in your browser.
+2. Upload your dataset file (`tmdb_5000_movies.csv`) when prompted.
+3. Run the notebook cells to install dependencies and write the app code.
+4. Add your Ngrok authtoken (replace the example token with your own from [ngrok dashboard](https://dashboard.ngrok.com/get-started/your-authtoken)).
+5. Run the Streamlit app and open the generated public URL to access the web app.
 
-----------------------------------------
+---
 
-Requirements
-------------
+## 🛠️ Code Overview
 
-- pandas  
-- scikit-learn  
-- streamlit  
-- pyngrok
+- `app.py` contains the Streamlit app code:
+  - Loads and preprocesses the dataset
+  - Creates TF-IDF vectors of movie overviews for mood matching
+  - Provides a user interface for input and displays recommendations
+- Ngrok is used to create a public URL for the Streamlit app running in Colab
 
-Install locally with:
-pip install pandas scikit-learn streamlit pyngrok
+---
 
-----------------------------------------
+## 🔧 Requirements
 
-Author
-------
+- Python 3.x
+- Packages (auto-installed in Colab):
+  - `streamlit`
+  - `pyngrok`
+  - `pandas`
+  - `scikit-learn`
 
-Vivek Vijay  
-GitHub: https://github.com/vivekvijay107
+Install locally via:
+
+```bash
+pip install streamlit pyngrok pandas scikit-learn
