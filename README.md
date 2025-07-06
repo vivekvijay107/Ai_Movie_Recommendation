@@ -37,13 +37,6 @@ Place the file `tmdb_5000_movies.csv` in your working directory or upload it in 
 
 ---
 
-## 🧠 Example Questions Asked
-
-```text
-What genre do you like? (e.g., Action, Comedy, Drama)
-Do you prefer 'recent' or 'classic' movies?
-Preferred language? (e.g., en, hi, fr)
-What's your mood? (optional)
 ## 📦 Requirements
 
 This project runs directly in Google Colab (no installation needed there), but if you're running locally, install the following packages:
@@ -57,3 +50,4 @@ This project runs directly in Google Colab (no installation needed there), but i
 ### 📥 Install all at once:
 ```bash
 pip install pandas numpy scikit-learn streamlit ipykernel
+
